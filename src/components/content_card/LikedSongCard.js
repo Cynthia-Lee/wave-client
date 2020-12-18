@@ -14,7 +14,7 @@ import { GlobalContext } from "../../GlobalState";
 function LikedSongCard({ videoId, playlist, history }) {
 
     const { user } = useContext(AuthContext);
-    // const [isBusy, setBusy] = useState(true);
+    const [isBusy, setBusy] = useState(true);
     const [videoDuration, setVideoDuration] = useState(""); // search does not return
     const [isFavorite, setFavorite] = useState(false);
 
@@ -25,7 +25,7 @@ function LikedSongCard({ videoId, playlist, history }) {
     const [selectedPlaylistId, setSelectedPlaylistId] = useState(null);
     const [visible, setVisible] = useState(false);
 
-    // const [mouseIn, setMouseIn] = useState(false);
+    const [mouseIn, setMouseIn] = useState(false);
 
     const [{ playing, currentSong }] = useContext(GlobalContext);
 

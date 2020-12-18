@@ -22,7 +22,7 @@ function SongCard({ video, playlist, history }) {
     const [selectedPlaylistId, setSelectedPlaylistId] = useState(null);
     const [visible, setVisible] = useState(false);
 
-    // const [mouseIn, setMouseIn] = useState(false); //for play button?
+    const [mouseIn, setMouseIn] = useState(false); //for play button?
 
     const [{ playing, currentSong }, dispatch] = useContext(GlobalContext);
 
