@@ -1,0 +1,62 @@
+{
+    "users": [
+        {
+            "username": "shepherd",
+            "email" : "shepherd@gmail.com",
+            "password": "70617373776F7264", 
+            "pfp": "",
+            "theme": "dark",
+            "volume" : 10,
+            "creatorPlaylists": [
+                0
+            ], 
+            "likedPlaylists" : [
+                1, 
+                2
+            ],
+            "likedSongs" : [
+                "ysPtBjY8o_A", 
+                "2TgO-tN5wAM", 
+                "Y3auFhxfsmI"
+            ]
+        },
+        {
+            "username": "bobcoolmusic",
+            "email" : "bobiscool@gmail.com",
+            "password": "626F6270617373776F72642121", 
+            "pfp": "",
+            "theme": "light",
+            "volume": 50,
+            "creatorPlaylists": [
+                1
+            ], 
+            "likedPlaylists" : [
+                2
+            ],
+            "likedSongs" : [
+                "dfmTfenEk6g",
+                "Urc9lKFe-m8",
+                "2TgO-tN5wAM"
+            ]
+        },
+        {
+            "username": "cynthetic",
+            "email" : "cynthia.lee.2@stonybrook.edu",
+            "password": "7075666665726669736866697368", 
+            "pfp": "",
+            "theme": "dark",
+            "volume": 10,
+            "creatorPlaylists": [
+                2
+            ], 
+            "likedPlaylists" : [
+                1
+            ],
+            "likedSongs" : [
+                "vuq-VAiW9kw",
+                "Dkk9gvTmCXY",
+                "P00HMxdsVZI"
+            ]
+        }
+    ]
+}

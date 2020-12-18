@@ -1,0 +1,92 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100% !important;
+}
+
+ul li.content-title{
+    max-height: 44px;
+    overflow: hidden;    
+}
+
+ul li.content-subtitle{
+    max-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content-tile-container {
+    padding: 5px;
+    /*
+    border-style: solid;
+    border-color: rebeccapurple;
+    */
+    background-color: rgba(196, 196, 196, 10%);
+}
+
+.text-info {
+    /* padding-left: 0px */
+    max-width: 192px;
+}
+
+.content-title { 
+    font-weight: 600;
+    /*elipse on 2 lines*/
+}
+
+.controls {
+    display: table;
+
+    width: 1px;
+    /*width: 10px;
+    height: auto;*/
+    /*overflow: hidden;*/
+    /*margin: 0 !important;*/
+}
+
+.control-icons {
+    display: table-cell;
+    vertical-align: center;
+    /*width: 100%;*/
+    /*margin: 0 auto;
+    text-align: center;*/
+}
+
+.no-spacing {
+    margin-top: 0;
+}
+
+.deadPlaylist {
+    padding: 0 !important;
+}
+
+.deadPlaylist .ant-result-icon {
+    margin: 0px 0 0 0 !important;
+}
+
+.deadPlaylist .ant-result-title {
+    font-size: 18px !important;
+}
+
+.deadPlaylist .ant-result-subtitle {
+    font-size: 14px !important;
+}
+
+.deadPlaylist .ant-result-extra {
+    margin: 5px 0 0 0 !important;
+}
+
+.deadPlaylistIcon {
+    font-size: 35px !important;
+    color: #faad14 !important;
+}
+
+.deadSpace {
+    /* background-color: blue; */
+    padding-top: 32px;
+}
+
+/*.thumbnail{
+    display: inline-block;
+}*/

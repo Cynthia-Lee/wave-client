@@ -1,0 +1,19 @@
+@import './../../index.css';
+
+.username-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-left: 2rem;
+    display: flex;
+    align-items: flex-end;
+    /*
+    display: grid;
+    align-content: end;
+    */
+    margin-bottom: 0;
+}
+
+.user-info {
+    margin-bottom: 2rem;
+    display: flex;
+}

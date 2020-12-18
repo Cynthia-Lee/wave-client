@@ -1,0 +1,119 @@
+@import "./../../index.css";
+
+.site-layout {
+    color: white;
+    height: 100vh;
+}
+
+#splash-layout {
+    /*background-color: #5E5E5E;*/
+    /*padding: 0 50px;*/
+    /**position: static !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;**/
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    /*background-color: #553bd1;*/
+}
+
+#splash-text {
+    /*margin-top: 64px;*/
+    /*padding: 24px;*/
+    margin-top: 14rem;
+    text-align: center;
+}
+
+#splash-text h1 {
+    color: white;
+    font-size: 9rem;
+    font-weight: 700;
+    /*margin-top: 8%;*/
+    /*letter-spacing: -0.04em !important;*/
+    margin-bottom: 0;
+}
+
+#splash-text h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: -1rem;
+    letter-spacing: 0.03rem !important;
+}
+
+#splash-button {
+    margin-top: 1.5rem;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 10rem !important;
+    height: 3rem !important;
+    line-height: 0px !important;
+    /* background-color: #00edcc; */
+    border-radius: 5rem;
+    letter-spacing: 0.1rem !important;
+    border: 0 !important;
+    text-shadow: none !important;
+}
+
+#splash-layout-background {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    justify-content: space-between;
+    height: 100%;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    margin-bottom: -6px;
+
+    /*Fix for safari gap*/
+    /*min-height: 100px;
+    max-height: 150px;*/
+}
+/* Animation */
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content1 {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}

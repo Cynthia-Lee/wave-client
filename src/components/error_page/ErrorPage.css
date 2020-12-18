@@ -1,0 +1,15 @@
+.ant-result-subtitle {
+    color: white !important;
+}
+
+.back-home-button {
+    color: #383838;
+}
+.back-home-button :hover {
+    color: #383838 !important;
+}
+.unauth-lock {
+    font-size: 5.2rem !important;
+    margin-bottom: -1.1rem;
+    color: #00EDCC;
+}

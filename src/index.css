@@ -1,0 +1,66 @@
+@import "~antd/dist/antd.css";
+@import "~antd/dist/antd.dark.css"; /* Dark Theme */
+
+body {
+  margin: 0;
+  font-family: "Inter";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  size: 0.2rem;
+}
+
+.content {
+  margin: 1.5rem;
+}
+
+.main {
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+.ant-layout-footer {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.ant-layout-footer {
+  padding: 20px 20px !important;
+}
+
+.ant-select-arrow {
+  color: white !important;
+}
+
+.ant-select-item-empty > * {
+  color: white !important;
+}
+
+.heart:hover {
+  color: #00edcc !important;
+}
+
+.song-content-tile-container .play-arrow:hover {
+  color: #00edcc;
+}
+
+.disabled {
+  color: darkgrey;
+  cursor: default;
+}
+
+.disabled:hover {
+  color:darkgrey !important;
+}
+
+.err-msg {
+  color: red ! important;
+}

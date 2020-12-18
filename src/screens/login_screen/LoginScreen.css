@@ -1,0 +1,45 @@
+@import './../../index.css';
+
+.logo {
+    /*text-align: "center";
+    height: "4rem";
+    width: "auto";
+    margin:"4rem";*/
+    /*height: 100%;*/
+}
+
+.form-card {
+    padding: 1.5rem;
+    min-height: 380px;
+    background-color: rgba(255,255,255,0.1);
+    width: 35rem;
+    margin: 0 auto;
+}
+
+.title, .footer {
+    text-align: center;
+}
+
+.divider {
+    size: 0.5rem;
+}
+
+.login-form-button {
+
+}
+
+.redirect{
+
+}
+
+.ant-input-password-icon{
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.ant-input-password-icon:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.login-button {
+    font-weight: bold;
+}

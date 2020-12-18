@@ -1,0 +1,130 @@
+{
+    "playlists" : [
+        {
+            "id" : 0,
+            "name" : "Cool Jams",
+            "creator" : "shepherd",
+            "cover" : "https://www.irancartoon.com/static/media/uploads/Banafsheh%201/Jeremy%20Mann%20-%20USA%20%20%20%20%20%20(100).jpg",
+            "isPrivate" : true,
+            "totalSongs" : 3,
+            "totalTime" : "PT9M32S",
+            "totalLikes" : 0,
+            "songs" : [
+                {
+                    "videoId" : "ysPtBjY8o_A",
+                    "title" : "Chris Christodoulou - Coalescence | Risk of Rain (2013)",
+                    "channelTitle" : "Chris Christodoulou",
+                    "thumbnail" : "http://i3.ytimg.com/vi/ysPtBjY8o_A/hqdefault.jpg",
+                    "duration" : "PT5M39S",
+                    "colors" :  [
+                        "#312c4a", "#d4c572"
+                    ]
+                },
+                {
+                    "videoId" : "2TgO-tN5wAM",
+                    "title" : "Undertale OST: 068 - Death by Glamour",
+                    "channelTitle" : "Misaki",
+                    "thumbnail" : "http://i3.ytimg.com/vi/2TgO-tN5wAM/hqdefault.jpg",
+                    "duration" : "PT2M14S",
+                    "colors" :  [
+                        "#ffca00", "#fc00f7"
+                    ]
+                },
+                {
+                    "videoId" : "Y3auFhxfsmI",
+                    "title" : "Pokemon Ruby/Sapphire/Emerald- Rustboro City",
+                    "channelTitle" : "pokemonmusicmaster",
+                    "thumbnail" : "http://i3.ytimg.com/vi/Y3auFhxfsmI/hqdefault.jpg",
+                    "duration" : "PT1M39S",
+                    "colors" :  [
+                        "#e2dec1", "#71c3a3"
+                    ]
+                }
+            ]
+        },
+        {
+            "id" : 1,
+            "name" : "Bob's First Playlist",
+            "creator" : "bobcoolmusic",
+            "cover" : "https://1.bp.blogspot.com/-R1OlnKGdLYc/T1rA9Q83LoI/AAAAAAAACWE/uDghXfDMEtQ/s1600/nametag.jpg",
+            "isPrivate" : false,
+            "totalSongs" : 4,
+            "totalTime" : "PT12M05S",
+            "totalLikes" : 808,
+            "songs" : [
+                {
+                    "videoId" : "Urc9lKFe-m8",
+                    "title" : "LARRY OWENS - INTERLUDE (BOB ROSS THE JOY OF PAINTING FULL THEME TUNE)",
+                    "channelTitle" : "TimeForHouse",
+                    "thumbnail" : "http://i3.ytimg.com/vi/Urc9lKFe-m8/hqdefault.jpg",
+                    "duration" : "PT3M1S",
+                    "colors" :  [
+                        "#0c0040", "#102e3c"
+                    ]
+                },
+                {
+                    "videoId" : "JUQDzj6R3p4",
+                    "title" : "\"Weird Al\" Yankovic - Bob",
+                    "channelTitle" : "alyankovic",
+                    "thumbnail" : "http://i3.ytimg.com/vi/JUQDzj6R3p4/hqdefault.jpg",
+                    "duration" : "PT2M26S",
+                    "colors" :  [
+                        "#c1c1c1", "#464646"
+                    ]
+                },
+                {
+                    "videoId" : "L3HQMbQAWRc",
+                    "title" : "Bob Marley - Don't worry be Happy",
+                    "channelTitle" : "sk8r123sk8r",
+                    "thumbnail" : "http://i3.ytimg.com/vi/L3HQMbQAWRc/hqdefault.jpg",
+                    "duration" : "PT4M49S",
+                    "colors" :  [
+                        "#fed100", "#fed100"
+                    ]
+                },
+                {
+                    "videoId" : "dfmTfenEk6g",
+                    "title" : "Bob’s Burgers - I Do",
+                    "channelTitle" : "Rand al'Thor",
+                    "thumbnail" : "http://i3.ytimg.com/vi/dfmTfenEk6g/hqdefault.jpg",
+                    "duration" : "PT1M49S",
+                    "colors" :  [
+                        "#92dff3", "#92dff3"
+                    ]
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "name" : "Good Mainstream Music",
+            "creator" : "cynthetic",
+            "cover" : "https://i.pinimg.com/originals/4d/6f/57/4d6f57fe18161373cad85cb1d6ca62c3.png",
+            "isPrivate" : false,
+            "totalSongs" : 2,
+            "totalTime" : "PT7M14S",
+            "totalLikes" : 1,
+            "songs" : [
+                {
+                    "videoId" : "vuq-VAiW9kw",
+                    "title" : "Lizzo - Good As Hell (Official Music Video)",
+                    "channelTitle" : "Lizzo Music",
+                    "thumbnail" : "http://i3.ytimg.com/vi/vuq-VAiW9kw/hqdefault.jpg",
+                    "duration" : "PT3M44S",
+                    "colors" :  [
+                        "#ff8442", "#ff61a5"
+                    ]
+                },
+                {
+                    "videoId" : "Dkk9gvTmCXY",
+                    "title" : "Taylor Swift - You Need To Calm Down",
+                    "channelTitle" : "Taylor Swift",
+                    "thumbnail" : "http://i3.ytimg.com/vi/Dkk9gvTmCXY/hqdefault.jpg",
+                    "duration" : "PT3M30S",
+                    "colors" :  [
+                        "#add8e6", "#ffb6c1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

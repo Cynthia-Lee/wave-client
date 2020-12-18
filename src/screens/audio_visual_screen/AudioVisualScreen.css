@@ -1,0 +1,17 @@
+@import './../../index.css';
+
+.song-name {
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 500px;
+}
+
+.info-pic {
+    margin-top: 2rem;
+}
+
+#viz{
+    height:300px;
+    width:1192px;
+    margin:0 auto;
+}

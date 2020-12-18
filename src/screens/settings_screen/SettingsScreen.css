@@ -1,0 +1,59 @@
+@import './../../index.css';
+
+h1 {
+    font-size: 2rem;
+}
+
+.settings-subheader {
+    margin-top: 2rem;
+}
+
+.settings-sub-subheader {
+    margin-top: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.theme-icon{
+    margin-right: 0;
+    margin-top: 0.05rem;
+}
+
+.footer-divider{
+    margin-top: 1.5rem;
+}
+
+.ant-input-affix-wrapper-borderless{
+    padding: 0;
+}
+
+#username-input{
+    /*width: auto;*/
+    width: 210px;
+}
+
+#save-button{
+    margin-top: 1rem;
+    color: #383838;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+    line-height: 0px !important;
+}
+
+#cancel-button{
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0 1.5rem;
+    line-height: 0px !important;
+    margin-left: 1.5rem;
+    border-width: 0px !important;
+}
+
+.button-icon {
+    margin-right: 0.4rem;    
+}

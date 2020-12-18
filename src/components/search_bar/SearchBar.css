@@ -1,0 +1,11 @@
+#user-menu, #ant-dropdown-link {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+#search {
+    float: left;
+    width: 30rem;
+}

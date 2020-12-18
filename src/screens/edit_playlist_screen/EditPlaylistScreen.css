@@ -1,0 +1,101 @@
+@import './../../index.css';
+
+.playlist-edit-info {
+    /*margin-left: 2rem;*/
+    display: flex;
+    align-items: flex-end;
+    display: grid; /* for artist, 2nd element */
+    align-content: flex-end; /* for artist, 2nd element */
+    margin-bottom: 0;
+    position: absolute;
+    /*margin-top: 2.9rem;*/
+}
+
+.edit-options {
+    margin-left: 2rem;
+}
+
+.edit-spacer {
+    margin-top: 10px;
+}
+
+.edit-save {
+    display: flex;
+    align-items: center;
+}
+
+.private-switch{
+    display: flex;
+    align-items: center;
+}
+
+.button-icon {
+    margin-right: 0.4rem;
+}
+
+#private-label {
+    margin-right: 24px;
+}
+
+#public-label {
+    margin-left: 24px;
+}
+
+#edit-playlist-name-icon {
+    font-size: 42px;
+    margin-left: 12px;
+}
+
+.large-icon {
+    font-size: 3rem !important;
+}
+
+.center-menu {
+    height: 3rem;
+}
+
+.playlist-text {
+    position: absolute;
+    bottom: 0px;
+}
+
+#playlist-name-input {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.edit-cancel {
+    margin-left: 1rem;
+}
+
+.private-switch {
+    align-self: center;
+}
+
+.upload-cover {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+.artist-name {
+    font-size: 1.3rem;
+    /*margin-top: -0.5rem;*/
+}
+
+.edit-margin-top {
+    margin-top: 1.7rem
+}
+
+.change-image-button {
+    position: absolute;
+}
+
+#edit-drag-drop {
+    margin-bottom: 90px;
+}
+
+.disabled-button, .disabled-button:hover{
+    border-color:grey;
+    background-color: grey;
+}

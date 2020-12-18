@@ -1,0 +1,62 @@
+@import './../../index.css';
+
+.song-info {
+    margin-left: 2rem;
+    display: flex;
+    align-items: flex-end;
+    display: grid; /* for artist, 2nd element */
+    align-content: flex-end; /* for artist, 2nd element */
+    margin-bottom: 0;
+}
+
+.large-song-controls {
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+.play-button, .favorite-button, .more-horiz {
+    margin-right: 30px;
+}
+
+.play-arrow {
+    font-size: 42px !important;
+}
+
+.favorite-button, .more-horiz {
+    font-size: 32px !important;
+}
+
+.play-button {
+    width: 60px !important;
+    height: 60px !important;
+    line-height: 0px !important;
+}
+
+.song-name {
+    font-size: 64px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.artist-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header-divider {
+    display: flex;
+    align-items: flex-end;
+}
+
+.center-icon {
+    height: 24px;
+}
+
+.number-label {
+    padding-left: 28px;
+}
+
+.time-icon {
+    padding-left: 52px;
+}
