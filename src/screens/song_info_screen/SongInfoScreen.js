@@ -3,11 +3,9 @@ import { Layout, Button, Row, Col, Image, Menu, Dropdown, Avatar, Form, Tooltip,
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
 import SongRowCard from "../../components/song_row_card/SongRowCard";
-import Widget from "../../components/widget/Widget";
 import './SongInfoScreen.css';
 import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause, AccessTime } from '@material-ui/icons';
 import SongModal from "../../components/SongModal";
-import SongCard from "../../components/content_card/SongCard";
 import ErrorPage from '../../components/error_page/ErrorPage';
 import { gql, useQuery, useMutation } from '@apollo/client';
 import { AuthContext } from '../../context/auth';
@@ -16,7 +14,7 @@ import { useParams } from 'react-router-dom';
 import youtube from '../../api/youtube';
 import { GlobalContext } from "../../GlobalState";
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function SongInfoScreen() {
     const { user } = useContext(AuthContext);

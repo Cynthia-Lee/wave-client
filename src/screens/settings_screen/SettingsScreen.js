@@ -1,17 +1,16 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Layout, Button, Avatar, Row, Col, Input, Switch } from "antd";
+import { Layout, Button, Avatar } from "antd";
 import Sidebar from "./../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
 import CoverModal from "../../components/CoverModal";
 import './SettingsScreen.css';
-import { Create, NightsStay, Brightness5 } from "@material-ui/icons";
-import { Typography, message } from 'antd';
+import { Create } from "@material-ui/icons";
+import { message } from 'antd';
 
 import { AuthContext } from '../../context/auth';
 import { gql, useQuery, useMutation } from '@apollo/client';
 
 const { Header, Content, Sider } = Layout;
-const { Paragraph, Text } = Typography;
 
 function SettingsScreen(props) {
     const { user } = useContext(AuthContext);

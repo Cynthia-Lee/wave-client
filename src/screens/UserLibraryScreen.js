@@ -2,14 +2,13 @@ import React, { useContext, useState } from 'react';
 import { Layout } from "antd";
 import Sidebar from "../components/sidebar/Sidebar";
 import TopBar from "../components/top_bar/TopBar";
-import Widget from "../components/widget/Widget";
 import ContentRow from "../components/content_row/ContentRow";
 
 import { withRouter } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
 import { gql, useQuery } from '@apollo/client';
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function UserLibraryScreen(props) {
     const { user, logout } = useContext(AuthContext);
