@@ -14,7 +14,7 @@ import ErrorPage from '../../components/error_page/ErrorPage';
 //const { user } = useContext(AuthContext);
 
 function UserProfileScreen(props) {
-    const { Header, Content, Sider, Footer } = Layout;
+    const { Header, Content, Sider } = Layout;
     const { user } = useContext(AuthContext);
     const [likedSongs, setLikedSongs] = useState([]);
     const [likedPlaylists, setLikedPlaylists] = useState([]);
