@@ -21,7 +21,7 @@ import { GlobalContext } from "../../GlobalState";
 
 const { confirm } = Modal;
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function EditPlaylistScreen(props) {
 

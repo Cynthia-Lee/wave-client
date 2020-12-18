@@ -3,7 +3,6 @@ import { Layout, Avatar, Button, Row, Col, Menu, Dropdown, Modal, Tooltip } from
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
 import SongRowCard from "../../components/song_row_card/SongRowCard";
-import Widget from "../../components/widget/Widget";
 import './PlaylistInfoScreen.css';
 import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause, AccessTime, Lock } from '@material-ui/icons';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -221,7 +220,7 @@ function PlaylistInfoScreen(props) {
             songs,
         } = thisPlaylist;
 
-        if (thisPlaylist.isPrivate && thisPlaylist.creator != user.username) {
+        if (thisPlaylist.isPrivate && thisPlaylist.creator !== user.username) {
             return <UnauthorizedPage />;
         }
 

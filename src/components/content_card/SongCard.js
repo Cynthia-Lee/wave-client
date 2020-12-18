@@ -178,7 +178,7 @@ function SongCard({ video, playlist, history }) {
                             <Col span={21} style={{ paddingRight: "12px", paddingLeft: "12px" }}>
                                 <ul>
                                     <Tooltip placement="top" title={<div dangerouslySetInnerHTML={{ __html: video.snippet.title }}></div>}>
-                                        <li className="content-title"><div style={playing && currentSong.videoId == video.id.videoId && currentSong.id == null ? { color: "#00EDCC" } : {}} className="elip" dangerouslySetInnerHTML={{ __html: video.snippet.title }}></div></li>
+                                        <li className="content-title"><div style={playing && currentSong.videoId === video.id.videoId && currentSong.id == null ? { color: "#00EDCC" } : {}} className="elip" dangerouslySetInnerHTML={{ __html: video.snippet.title }}></div></li>
                                     </Tooltip>
                                     <li className="content-subtitle"><div className="elip">{video.snippet.channelTitle}</div></li>
                                 </ul>

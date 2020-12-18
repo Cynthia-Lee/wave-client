@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import './ContentCard.css';
-import { Card, Avatar, Row, Col, Image, Tooltip, Modal } from "antd";
+import { Card, Avatar, Row, Col, Tooltip } from "antd";
 import { gql, useQuery } from '@apollo/client';
 
 function UserCard({ user, history }) {

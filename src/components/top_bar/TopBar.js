@@ -51,7 +51,7 @@ function TopBar() {
     }, [thisUser]);
 
     function logoutCallback(){
-        if (context.state != "closed") {
+        if (context.state !== "closed") {
             context.close();
         }
         setCurrentSong(null);

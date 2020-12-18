@@ -61,7 +61,7 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
   function onCreate() {
     // console.log(thumbnail);//
     // console.log(colors); //
-    if (screen == "edit" && selectedPlaylistId == playlistId) {
+    if (screen === "edit" && selectedPlaylistId === playlistId) {
       addSongLocal({
         id: id,
         videoId: videoId,
@@ -167,7 +167,7 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
 
   function changeCurrentSong(e) {
     e.stopPropagation();
-    if (!currentSong || currentSong.videoId != videoId || currentSong.id != id) {
+    if (!currentSong || currentSong.videoId !== videoId || currentSong.id !== id) {
       setCurrentSong({
         id: id,
         videoId: videoId,
@@ -181,7 +181,7 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
     } else {
       resumeSong();
     }
-    if (currentPlaylist != playlistId) {
+    if (currentPlaylist !== playlistId) {
       setCurrentPlaylist(playlistId);
     }
   }
@@ -200,7 +200,7 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
         e.domEvent.stopPropagation();
         setVisible(true);
       }}>Add to playlist</Menu.Item>
-      {screen == "edit" ?
+      {screen === "edit" ?
         <Menu.Item onClick={(e) => {
           showDelete(e);
         }}>Delete</Menu.Item>
@@ -239,18 +239,18 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
         onChange={(value) => setSelectedColors(value)}
       />
 
-      <Card className="song-content-tile-container" size="small" hoverable={true} bordered={false} onClick={screen != "edit" ?e => { goToSongInfo(e) }:e=>{}}>
+      <Card className="song-content-tile-container" size="small" hoverable={true} bordered={false} onClick={screen !== "edit" ?e => { goToSongInfo(e) }:e=>{}}>
 
         <Row align='middle' wrap={false}>
           {index + 1}
           <Col flex="3.5rem">
-            {screen != "edit" ? playing && currentSong && currentSong.videoId == videoId && currentSong.id == id ? <Pause className="play-arrow" size="large" onClick={(e) => { pauseSong(e) }} /> : <PlayArrow className="play-arrow" size="large" onClick={(e) => changeCurrentSong(e)} /> : <PlayArrow onClick={e => e.stopPropagation()} className="play-arrow disabled" size="large" />}
+            {screen !== "edit" ? playing && currentSong && currentSong.videoId === videoId && currentSong.id === id ? <Pause className="play-arrow" size="large" onClick={(e) => { pauseSong(e) }} /> : <PlayArrow className="play-arrow" size="large" onClick={(e) => changeCurrentSong(e)} /> : <PlayArrow onClick={e => e.stopPropagation()} className="play-arrow disabled" size="large" />}
           </Col>
 
           <Col flex="auto">
             <div className="song-text-info">
               <ul>
-                <li className="song-content-title"><div style={playing && currentSong && currentSong.videoId == videoId && currentSong.id === id ? { color: "#00EDCC" } : {}} className="elip" dangerouslySetInnerHTML={{ __html: title }}></div></li>
+                <li className="song-content-title"><div style={playing && currentSong && currentSong.videoId === videoId && currentSong.id === id ? { color: "#00EDCC" } : {}} className="elip" dangerouslySetInnerHTML={{ __html: title }}></div></li>
                 <li className="content-subtitle"><div className="elip" dangerouslySetInnerHTML={{ __html: channelTitle }}></div></li>
               </ul>
             </div>
@@ -260,7 +260,7 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
             <div className="song-controls">
               <Row wrap={false}>
 
-                {screen == "edit" ?
+                {screen === "edit" ?
                   <Col>
                     <Button onClick={(e) => { e.stopPropagation(); setVisibleCP(true); }}
                       className="duration color-button"

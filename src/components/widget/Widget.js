@@ -93,7 +93,7 @@ function Widget(props) {
 
     useEffect(() => {
         setLoading(false);
-        if (context.state != "closed") {
+        if (context.state !== "closed") {
             context.close();
         }
         

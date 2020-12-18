@@ -173,7 +173,7 @@ function PlaylistCard({ playlist, history }) {
     let menu = null;
     menu = (
         <Menu mode="horizontal" theme="dark" className="content-menu" triggerSubMenuAction="click">
-            {playlist.creator == user.username ? <><Menu.Item><Link onClick={e => e.stopPropagation()} to={"/edit/" + playlist.id}>Edit</Link></Menu.Item><Menu.Item onClick={e => showDeleteModal(e)}>Delete</Menu.Item></> : <></>}
+            {playlist.creator === user.username ? <><Menu.Item><Link onClick={e => e.stopPropagation()} to={"/edit/" + playlist.id}>Edit</Link></Menu.Item><Menu.Item onClick={e => showDeleteModal(e)}>Delete</Menu.Item></> : <></>}
             <Menu.Item onClick={(e) => copyPlaylistCallback(e)}>Copy Playlist</Menu.Item>
             {playlist.isPrivate ? <></> : <Menu.Item onClick={(e) => showShareModal(e)}>Share Playlist</Menu.Item>}
         </Menu >
@@ -201,7 +201,7 @@ function PlaylistCard({ playlist, history }) {
                             <Row>
                                 <ul>
                                     <Tooltip placement="top" title={<div dangerouslySetInnerHTML={{ __html: playlist.name }}></div>}>
-                                        <li className="content-title"><div style={playing && currentPlaylist == playlist.id?{color: "#00EDCC"}:{}}dangerouslySetInnerHTML={{ __html: playlist.name }}></div></li>
+                                        <li className="content-title"><div style={playing && currentPlaylist === playlist.id?{color: "#00EDCC"}:{}}dangerouslySetInnerHTML={{ __html: playlist.name }}></div></li>
                                     </Tooltip>
                                     <li className="content-subtitle"><Link onClick={e => e.stopPropagation()} to={"/profile/" + playlist.creator}>{playlist.creator}</Link></li>
                                 </ul>

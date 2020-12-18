@@ -73,10 +73,10 @@ function UserProfileScreen(props) {
             </Layout>
         </Layout>);
     } else {
-        if (thisUser == undefined) {
+        if (thisUser === undefined) {
             return <ErrorPage />;
         }
-        let publicPlaylists = thesePlaylists.filter(playlist => playlist.creator == usernameLink && !playlist.isPrivate);
+        let publicPlaylists = thesePlaylists.filter(playlist => playlist.creator === usernameLink && !playlist.isPrivate);
 
         return (
             <Layout>
