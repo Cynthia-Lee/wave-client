@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import 'antd/dist/antd.css';
-import { Button, Modal, Input, message } from 'antd';
+import { Modal, Input, message } from 'antd';
 
 const { Search } = Input;
 

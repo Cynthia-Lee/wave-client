@@ -15,7 +15,7 @@ const { confirm } = Modal;
 
 function PlaylistCard({ playlist, history }) {
 
-    const [{ currentPlaylist, playing }, dispatch] = useContext(
+    const [{ currentPlaylist, playing }] = useContext(
         GlobalContext
     );
 
@@ -47,14 +47,14 @@ function PlaylistCard({ playlist, history }) {
         return true;
     }
 
-    const [likePlaylist, { error: errorL }] = useMutation(LIKE_PLAYLIST_MUTATION, {
+    const [likePlaylist] = useMutation(LIKE_PLAYLIST_MUTATION, {
         variables: {
             playlistId: playlist.id
         },
         //refetchQueries: [{ query: FETCH_USER_QUERY }]
     });
 
-    const [unlikePlaylist, { error: errorUL }] = useMutation(UNLIKE_PLAYLIST_MUTATION, {
+    const [unlikePlaylist] = useMutation(UNLIKE_PLAYLIST_MUTATION, {
         variables: {
             playlistId: playlist.id
         },
@@ -78,7 +78,7 @@ function PlaylistCard({ playlist, history }) {
         history.push('/playlist/' + playlist.id);
     }
 
-    const [deletePlaylist, { error }] = useMutation(DELETE_PLAYLIST_MUTATION, {
+    const [deletePlaylist] = useMutation(DELETE_PLAYLIST_MUTATION, {
         variables: { playlistId: playlist.id },
         refetchQueries: [{ query: FETCH_PLAYLISTS_QUERY }]
     });
@@ -128,7 +128,7 @@ function PlaylistCard({ playlist, history }) {
     }
 
     // COPY PLAYLIST FUNCTIONS
-    const [copyPlaylist, { error: copyError }] = useMutation(COPY_PLAYLIST_MUTATION, {
+    const [copyPlaylist] = useMutation(COPY_PLAYLIST_MUTATION, {
         variables: {
             name: playlist.name + ' (Copy)',
             cover: playlist.cover,

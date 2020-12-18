@@ -7,8 +7,6 @@ import { gql, useQuery } from '@apollo/client';
 
 import { Link } from "react-router-dom";
 
-const { SubMenu } = Menu;
-
 function SearchBar({ onSubmit }) {
     const { user, logout } = useContext(AuthContext);
 
@@ -24,7 +22,7 @@ function SearchBar({ onSubmit }) {
 
     const [picture, setPicture] = useState("");
 
-    const { loading: loadingUser, error: errorUser, data: dataUser = {} } = useQuery(FETCH_USER_QUERY, {
+    const { data: dataUser = {} } = useQuery(FETCH_USER_QUERY, {
         variables: {
             username: user.username
         },

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './ContentCard.css';
-import { Menu, Dropdown, Card, Avatar, Row, Col, Image, Tooltip, Modal, Result, Button } from "antd";
+import { Menu, Dropdown, Card, Avatar, Row, Col, Tooltip, Modal, Result, Button } from "antd";
 import { WarningFilled } from '@ant-design/icons';
 import { Favorite, MoreHoriz, FavoriteBorder } from '@material-ui/icons';
 import { AuthContext } from '../../context/auth';
@@ -10,13 +10,10 @@ import { gql, useMutation, useQuery } from '@apollo/client';
 import { GlobalContext } from "../../GlobalState";
 
 import ShareModal from '../ShareModal';
-import ErrorPage from '../error_page/ErrorPage';
-
-const { confirm } = Modal;
 
 function PlaylistCard({ playlistId, history, usernameLink }) {
 
-    const [{ currentPlaylist, playing }, dispatch] = useContext(
+    const [{ currentPlaylist, playing }] = useContext(
         GlobalContext
     );
 
@@ -43,7 +40,7 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
     const [totalTime, setTotalTime] = useState(0);
     const [playlistSongs, setPlaylistSongs] = useState("");
 
-    const { loading: loadingP, error: errorP, data: dataP = {} } = useQuery(FETCH_PLAYLIST_QUERY, {
+    const { loading: loadingP, data: dataP = {} } = useQuery(FETCH_PLAYLIST_QUERY, {
         variables: {
             playlistId: playlistId
         },
@@ -61,7 +58,7 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
         }
     }, [thisPlaylist]);
 
-    const { loading: loadingU, error: errorU, data: dataU = {} } = useQuery(FETCH_USER_QUERY, {
+    const { data: dataU = {} } = useQuery(FETCH_USER_QUERY, {
         variables: {
             username: user.username
         },
@@ -69,27 +66,27 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
     const thisUser = dataU.getUser;
 
     useEffect(() => {
+        function checkFavorite() {
+            var index = thisUser.likedPlaylists.indexOf(playlistId);
+            if (index <= -1) {
+                return false;
+            }
+            return true;
+        }
+
         if (thisUser) {
             setFavorite(checkFavorite());
         }
     }, [thisUser]);
 
-    function checkFavorite() {
-        var index = thisUser.likedPlaylists.indexOf(playlistId);
-        if (index <= -1) {
-            return false;
-        }
-        return true;
-    }
-
-    const [likePlaylist, { error: errorL }] = useMutation(LIKE_PLAYLIST_MUTATION, {
+    const [likePlaylist] = useMutation(LIKE_PLAYLIST_MUTATION, {
         variables: {
             playlistId: playlistId
         },
         //refetchQueries: [{ query: FETCH_USER_QUERY }]
     });
 
-    const [unlikePlaylist, { error: errorUL }] = useMutation(UNLIKE_PLAYLIST_MUTATION, {
+    const [unlikePlaylist] = useMutation(UNLIKE_PLAYLIST_MUTATION, {
         variables: {
             playlistId: playlistId
         },
@@ -113,13 +110,6 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
         history.push('/playlist/' + playlistId);
     }
 
-    /*
-    const [deletePlaylist, { error }] = useMutation(DELETE_PLAYLIST_MUTATION, {
-        variables: { playlistId: playlistId },
-        refetchQueries: [{ query: FETCH_PLAYLISTS_QUERY }]
-    });
-    */
-
     function showDeleteModal(e) {
         e.domEvent.stopPropagation();
         showConfirm(); // modal
@@ -139,7 +129,7 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
     }
 
     // COPY PLAYLIST FUNCTIONS
-    const [copyPlaylist, { error: copyError }] = useMutation(COPY_PLAYLIST_MUTATION, {
+    const [copyPlaylist] = useMutation(COPY_PLAYLIST_MUTATION, {
         variables: {
             name: name + ' (Copy)',
             cover: cover,
@@ -184,7 +174,7 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
     let menu = null;
     menu = (
         <Menu mode="horizontal" theme="dark" className="content-menu" triggerSubMenuAction="click">
-            {creator == user.username ? <><Menu.Item><Link onClick={e => e.stopPropagation()} to={"/edit/" + playlistId}>Edit</Link></Menu.Item><Menu.Item onClick={e => showDeleteModal(e)}>Delete</Menu.Item></> : <></>}
+            {creator === user.username ? <><Menu.Item><Link onClick={e => e.stopPropagation()} to={"/edit/" + playlistId}>Edit</Link></Menu.Item><Menu.Item onClick={e => showDeleteModal(e)}>Delete</Menu.Item></> : <></>}
             <Menu.Item onClick={(e) => copyPlaylistCallback(e)}>Copy Playlist</Menu.Item>
             {isPrivate ? <></> : <Menu.Item onClick={(e) => showShareModal(e)}>Share Playlist</Menu.Item>}
         </Menu >
@@ -193,7 +183,7 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
     if (loadingP) {
         return <p>Loading...</p>;
     } else {
-        if (thisPlaylist == undefined) {
+        if (thisPlaylist === undefined) {
             return (
                 <Card className="content-tile-container" size="small" hoverable={true} bordered={false}>
                     <Result className="deadPlaylist"
@@ -201,11 +191,11 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
                         icon={<WarningFilled className="deadPlaylistIcon" />}
                         title="Deleted Playlist"
                         subTitle="This playlist no longer exists."
-                        extra={ usernameLink == user.username ? 
+                        extra={usernameLink === user.username ?
                             <Button type="" onClick={unlikePlaylist}>
                                 Remove from Liked Playlists
-                            </Button> 
-                            : 
+                            </Button>
+                            :
                             <div className="deadSpace"></div>
                         }
                     />
@@ -215,14 +205,14 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
         }
 
         const {
-            id,
+            // id,
             name,
             creator,
             cover,
             isPrivate,
-            totalTime,
-            totalLikes,
-            songs,
+            // totalTime,
+            // totalLikes,
+            // songs,
         } = thisPlaylist;
 
         return (
@@ -247,7 +237,7 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
                                 <Row>
                                     <ul>
                                         <Tooltip placement="top" title={<div dangerouslySetInnerHTML={{ __html: name }}></div>}>
-                                            <li className="content-title"><div style={playing && currentPlaylist == playlistId?{color: "#00EDCC"}:{}} dangerouslySetInnerHTML={{ __html: name }}></div></li>
+                                            <li className="content-title"><div style={playing && currentPlaylist === playlistId ? { color: "#00EDCC" } : {}} dangerouslySetInnerHTML={{ __html: name }}></div></li>
                                         </Tooltip>
                                         <li className="content-subtitle"><Link onClick={e => e.stopPropagation()} to={"/profile/" + creator}>{creator}</Link></li>
                                     </ul>
@@ -276,12 +266,6 @@ function PlaylistCard({ playlistId, history, usernameLink }) {
         );
     }
 }
-
-const DELETE_PLAYLIST_MUTATION = gql`
-    mutation deletePlaylist($playlistId: ID!) {
-        deletePlaylist(playlistId: $playlistId)
-    }
-`;
 
 const FETCH_PLAYLISTS_QUERY = gql`
   query {

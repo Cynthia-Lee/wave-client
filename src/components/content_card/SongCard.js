@@ -11,8 +11,6 @@ import youtube from '../../api/youtube';
 
 import { GlobalContext } from "../../GlobalState";
 
-const { confirm } = Modal;
-
 function SongCard({ video, playlist, history }) {
 
     const { user } = useContext(AuthContext);
@@ -24,7 +22,7 @@ function SongCard({ video, playlist, history }) {
     const [selectedPlaylistId, setSelectedPlaylistId] = useState(null);
     const [visible, setVisible] = useState(false);
 
-    const [mouseIn, setMouseIn] = useState(false); //for play button?
+    // const [mouseIn, setMouseIn] = useState(false); //for play button?
 
     const [{ playing, currentSong }, dispatch] = useContext(GlobalContext);
 
@@ -43,7 +41,7 @@ function SongCard({ video, playlist, history }) {
         });
     }, []);
 
-    const [addSong, { error }] = useMutation(ADD_SONG_MUTATION, {
+    const [addSong] = useMutation(ADD_SONG_MUTATION, {
         variables: {
             playlistId: selectedPlaylistId,
             videoId: video.id.videoId,
@@ -121,14 +119,14 @@ function SongCard({ video, playlist, history }) {
         return true;
     }
 
-    const [likeSong, { error: errorL }] = useMutation(LIKE_SONG_MUTATION, {
+    const [likeSong] = useMutation(LIKE_SONG_MUTATION, {
         variables: {
             videoId: video.id.videoId
         },
         //refetchQueries: [{ query: FETCH_USER_QUERY }]
     });
 
-    const [unlikeSong, { error: errorUL }] = useMutation(UNLIKE_SONG_MUTATION, {
+    const [unlikeSong] = useMutation(UNLIKE_SONG_MUTATION, {
         variables: {
             videoId: video.id.videoId
         },
@@ -266,8 +264,8 @@ const FETCH_USER_QUERY = gql`
 
 const LIKE_SONG_MUTATION = gql`
     mutation likeSong($videoId: String!) {
-                    likeSong(videoId: $videoId) {
-                    id
+        likeSong(videoId: $videoId) {
+            id
             email
             username
             likedSongs

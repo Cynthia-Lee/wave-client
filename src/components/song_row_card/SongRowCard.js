@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import './SongRowCard.css';
-import { Menu, Dropdown, Card, Avatar, Row, Col, Form, Modal, message, Button } from "antd";
-import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause, Lens } from '@material-ui/icons';
+import { Menu, Dropdown, Card, Row, Col, Form, Modal, message, Button } from "antd";
+import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause } from '@material-ui/icons';
 import SongModal from "../SongModal";
 import ColorModal from "../color_modal/ColorModal";
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -118,7 +118,7 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
   }
 
   // USER LIKE FUNCTIONS
-  const { loading, error: errorU, data = {} } = useQuery(FETCH_USER_QUERY, {
+  const { data = {} } = useQuery(FETCH_USER_QUERY, {
     variables: {
       username: user.username
     },
@@ -140,14 +140,14 @@ function SongRowCard({ index, id, videoId, title, channelTitle, thumbnail, durat
     return true;
   }
 
-  const [likeSong, { error: errorL }] = useMutation(LIKE_SONG_MUTATION, {
+  const [likeSong] = useMutation(LIKE_SONG_MUTATION, {
     variables: {
       videoId: videoId
     },
     //refetchQueries: [{ query: FETCH_USER_QUERY }]
   });
 
-  const [unlikeSong, { error: errorUL }] = useMutation(UNLIKE_SONG_MUTATION, {
+  const [unlikeSong] = useMutation(UNLIKE_SONG_MUTATION, {
     variables: {
       videoId: videoId
     },

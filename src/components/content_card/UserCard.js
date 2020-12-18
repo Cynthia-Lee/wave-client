@@ -4,13 +4,11 @@ import './ContentCard.css';
 import { Card, Avatar, Row, Col, Image, Tooltip, Modal } from "antd";
 import { gql, useQuery } from '@apollo/client';
 
-const { confirm } = Modal;
-
 function UserCard({ user, history }) {
 
     const [picture, setPicture] = useState("");
 
-    const { loading: loadingUser, error: errorUser, data: dataUser = {} } = useQuery(FETCH_USER_QUERY, {
+    const { loading: loadingUser, data: dataUser = {} } = useQuery(FETCH_USER_QUERY, {
         variables: {
             username: user.username
         },

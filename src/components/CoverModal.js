@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import 'antd/dist/antd.css';
-import { Button, Modal, Form, Input, Radio } from 'antd';
+import { Modal, Form, Input } from 'antd';
 
 const CoverModal = ({ visible, onCreate, onCancel, pictureModal }) => {
     const [form] = Form.useForm();

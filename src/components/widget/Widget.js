@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Avatar, Row, Col, Progress, Slider, Tooltip, Spin } from 'antd';
+import { Avatar, Row, Col, Slider, Tooltip, Spin } from 'antd';
 import { Favorite, FavoriteBorder, QueueMusic, BarChartRounded, SkipNext, SkipPrevious, PlayArrow, Pause, Repeat, VolumeUp } from '@material-ui/icons';
 import { Link, withRouter } from "react-router-dom";
 import './Widget.css';
@@ -209,13 +209,13 @@ function Widget(props) {
         return true;
     }
 
-    const [likeSong, { error: errorL }] = useMutation(LIKE_SONG_MUTATION, {
+    const [likeSong] = useMutation(LIKE_SONG_MUTATION, {
         variables: {
             videoId: currentSong ? currentSong.videoId : ""
         },
     });
 
-    const [unlikeSong, { error: errorUL }] = useMutation(UNLIKE_SONG_MUTATION, {
+    const [unlikeSong] = useMutation(UNLIKE_SONG_MUTATION, {
         variables: {
             videoId: currentSong ? currentSong.videoId : ""
         },

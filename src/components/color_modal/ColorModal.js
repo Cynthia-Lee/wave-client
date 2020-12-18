@@ -7,21 +7,20 @@ function ColorModal({ colors, visible, onCancel, onColor }, props) { // visible,
 
     const [c1, setc1] = useState(colors[0]);
     const [c2, setc2] = useState(colors[1]);
-
-    let colorStyle = {
+    const [colorStyle, setColorStyle] = useState({
         backgroundImage: "linear-gradient(" + c1 + "," + c2 + ")",
         height: "150px",
         width: "150px",
         borderRadius: "50%",
-    };
+    });
 
     useEffect(() => {
-        colorStyle = {
+        setColorStyle({
             backgroundImage: "linear-gradient(" + c1 + "," + c2 + ")",
             height: "150px",
             width: "150px",
             borderRadius: "50%",
-        }
+        });
     }, [c1, c2]);
 
     function resetColors() {

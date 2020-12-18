@@ -11,12 +11,10 @@ import youtube from '../../api/youtube';
 
 import { GlobalContext } from "../../GlobalState";
 
-const { confirm } = Modal;
-
 function LikedSongCard({ videoId, playlist, history }) {
 
     const { user } = useContext(AuthContext);
-    const [isBusy, setBusy] = useState(true);
+    // const [isBusy, setBusy] = useState(true);
     const [videoDuration, setVideoDuration] = useState(""); // search does not return
     const [isFavorite, setFavorite] = useState(false);
 
@@ -27,9 +25,9 @@ function LikedSongCard({ videoId, playlist, history }) {
     const [selectedPlaylistId, setSelectedPlaylistId] = useState(null);
     const [visible, setVisible] = useState(false);
 
-    const [mouseIn, setMouseIn] = useState(false);
+    // const [mouseIn, setMouseIn] = useState(false);
 
-    const [{ playing, currentSong }, dispatch] = useContext(GlobalContext);
+    const [{ playing, currentSong }] = useContext(GlobalContext);
 
     useEffect(() => {
         youtube.get('/videos', {
@@ -81,7 +79,7 @@ function LikedSongCard({ videoId, playlist, history }) {
     }
 
     // USER LIKE FUNCTIONS
-    const { loading, error: errorU, data = {} } = useQuery(FETCH_USER_QUERY, {
+    const { data = {} } = useQuery(FETCH_USER_QUERY, {
         variables: {
             username: user.username
         },
@@ -103,13 +101,13 @@ function LikedSongCard({ videoId, playlist, history }) {
         return true;
     }
 
-    const [likeSong, { error: errorL }] = useMutation(LIKE_SONG_MUTATION, {
+    const [likeSong] = useMutation(LIKE_SONG_MUTATION, {
         variables: {
             videoId: videoId
         },
     });
 
-    const [unlikeSong, { error: errorUL }] = useMutation(UNLIKE_SONG_MUTATION, {
+    const [unlikeSong] = useMutation(UNLIKE_SONG_MUTATION, {
         variables: {
             videoId: videoId
         },

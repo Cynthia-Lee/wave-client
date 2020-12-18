@@ -1,18 +1,17 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Menu } from "antd";
 import Logo from "../Logo";
 import './Sidebar.css';
 import AudioVisualSmall from "../audio_visual_small/AudioVisualSmall";
-import { Search, LibraryMusic, Favorite, History, AddCircleOutline } from '@material-ui/icons';
+import { Search, LibraryMusic, Favorite, AddCircleOutline } from '@material-ui/icons';
 import { Link, withRouter } from "react-router-dom";
 
-import { AuthContext } from '../../context/auth';
 import { gql, useMutation } from '@apollo/client';
 
 function Sidebar(props) {
     // const { user } = useContext(AuthContext);
 
-    const [createPlaylist, { error }] = useMutation(CREATE_PLAYLIST_MUTATION, {
+    const [createPlaylist] = useMutation(CREATE_PLAYLIST_MUTATION, {
         variables: {
             name: "Untitled Playlist",
             cover: "https://static1.squarespace.com/static/5d2e2c5ef24531000113c2a4/5d392a924397f100011fa30e/5d4af5c5c7e44500015d62dd/1580455005536/?format=1500w",

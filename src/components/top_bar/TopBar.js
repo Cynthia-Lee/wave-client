@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import './TopBar.css';
-import { Menu, Avatar, Dropdown, Input } from "antd";
+import { Menu, Avatar, Dropdown } from "antd";
 import { ArrowDropDown } from '@material-ui/icons';
 
 import { AuthContext } from '../../context/auth';
@@ -9,10 +9,8 @@ import { gql, useQuery } from '@apollo/client';
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../GlobalState";
 
-const { SubMenu } = Menu;
-
 function TopBar() {
-    const [{ context, source, currentSong, playing, currentPlaylist }, dispatch] = useContext(
+    const [{ context }, dispatch] = useContext(
         GlobalContext
     );
 
@@ -39,7 +37,7 @@ function TopBar() {
     const { user, logout } = useContext(AuthContext);
     const [picture, setPicture] = useState("");
 
-    const { loading: loadingUser, error: errorUser, data: dataUser = {} } = useQuery(FETCH_USER_QUERY, {
+    const { loading: loadingUser, data: dataUser = {} } = useQuery(FETCH_USER_QUERY, {
         variables: {
             username: user.username
         },

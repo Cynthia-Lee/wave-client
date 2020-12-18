@@ -1,11 +1,10 @@
 //npm package//import 'react-perfect-scrollbar/dist/css/styles.css';
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route, /*Link, useRouteMatch*/ } from 'react-router-dom';
 //import GlobalStyles from 'src/components/GlobalStyles';
 //import theme from 'src/theme';
 
 import { Layout } from "antd";
-import Widget from './components/widget/Widget';
 
 import SplashScreen from "./screens/splash_screen/SplashScreen";
 import LoginScreen from "./screens/login_screen/LoginScreen";
@@ -31,7 +30,6 @@ import { GlobalState } from "./GlobalState";
 
 import "./index.css";
 
-const { Content, Footer } = Layout;
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 function App() {
