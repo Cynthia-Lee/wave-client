@@ -151,7 +151,7 @@ function Widget(props) {
         function loadSound() {
             setLoading(true);
             var request = new XMLHttpRequest();
-            request.open("GET", "http://localhost:8000/music/" + id, true);
+            request.open("GET", "https://vast-wave-49452.herokuapp.com/music/" + id, true);
             request.responseType = "arraybuffer";
 
             request.onload = function () {
