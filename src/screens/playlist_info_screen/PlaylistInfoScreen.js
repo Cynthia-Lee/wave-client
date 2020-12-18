@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Layout, Avatar, Button, Row, Col, Menu, Dropdown, Image, Modal, Tooltip } from "antd";
+import { Layout, Avatar, Button, Row, Col, Menu, Dropdown, Modal, Tooltip } from "antd";
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
 import SongRowCard from "../../components/song_row_card/SongRowCard";
 import Widget from "../../components/widget/Widget";
 import './PlaylistInfoScreen.css';
-import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause, AccessTime, Create, Lock } from '@material-ui/icons';
+import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause, AccessTime, Lock } from '@material-ui/icons';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 
 import { AuthContext } from '../../context/auth';
 import { gql, useQuery, useMutation } from '@apollo/client';
-import { Link, useParams, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import ShareModal from '../../components/ShareModal';
 import ErrorPage from '../../components/error_page/ErrorPage';
@@ -19,7 +19,7 @@ import { GlobalContext } from "../../GlobalState";
 
 const { confirm } = Modal;
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function PlaylistInfoScreen(props) {
 

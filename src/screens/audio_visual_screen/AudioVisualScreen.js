@@ -2,17 +2,15 @@ import React, { useEffect, useContext } from 'react';
 import { Layout, Avatar, Tooltip } from "antd";
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
-import Widget from "../../components/widget/Widget";
-import ContentRow from "../../components/content_row/ContentRow";
 import './AudioVisualScreen.css';
 
 import { GlobalContext } from "../../GlobalState";
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function AudioVisualScreen() {
 
-    const [{ context, source, currentSong }, dispatch] = useContext(
+    const [{ context, source, currentSong }] = useContext(
         GlobalContext
     );
 

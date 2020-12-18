@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Layout, Button, Form, Input, Alert } from "antd";
+import { Layout, Button, Form, Input } from "antd";
 import Logo from "../../components/Logo";
 import './LoginScreen.css';
 import { withRouter } from "react-router-dom";

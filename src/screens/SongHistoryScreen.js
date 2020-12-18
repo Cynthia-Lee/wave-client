@@ -1,9 +1,7 @@
 import React from 'react';
-import { Layout, Avatar, Row, Col } from "antd";
+import { Layout, Row, Col } from "antd";
 import Sidebar from "../components/sidebar/Sidebar";
 import TopBar from "../components/top_bar/TopBar";
-import Widget from "../components/widget/Widget";
-import SongRowCard from '../components/song_row_card/SongRowCard';
 import { AccessTime } from "@material-ui/icons"
 
 /*import user from "./../dummy_data/user.json";

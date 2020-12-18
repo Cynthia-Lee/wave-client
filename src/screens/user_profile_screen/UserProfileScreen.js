@@ -1,14 +1,12 @@
-import React, { useContext, useState, useCallback, useEffect } from 'react';
-import { Layout, Avatar, Button } from "antd";
+import React, { useContext, useState, useEffect } from 'react';
+import { Layout, Avatar } from "antd";
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
 import ContentRow from "../../components/content_row/ContentRow";
-import Widget from "../../components/widget/Widget";
 import './UserProfileScreen.css';
 
 import { AuthContext } from '../../context/auth';
 import { gql, useQuery } from '@apollo/client';
-import { Link } from 'react-router-dom';
 
 import ErrorPage from '../../components/error_page/ErrorPage';
 

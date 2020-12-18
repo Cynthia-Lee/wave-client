@@ -1,18 +1,17 @@
-import React, { useContext, useState } from 'react';
-import { Layout, Row, Col, Input } from "antd";
+import React, { useState } from 'react';
+import { Layout } from "antd";
 import { gql, useQuery } from '@apollo/client';
 import Fuse from 'fuse.js';
 
 import Sidebar from "../../components/sidebar/Sidebar";
 import SearchBar from "../../components/search_bar/SearchBar";
 import ContentRow from "../../components/content_row/ContentRow";
-import Widget from "../../components/widget/Widget";
 
 import youtube from '../../api/youtube';
 
 import "./SearchScreen.css";
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function SearchScreen() {
     const [videos, setVideos] = useState([]);

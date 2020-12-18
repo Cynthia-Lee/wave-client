@@ -4,7 +4,6 @@ import { UploadOutlined } from '@ant-design/icons';
 import Sidebar from "../../components/sidebar/Sidebar";
 import TopBar from "../../components/top_bar/TopBar";
 import SongRowCard from "../../components/song_row_card/SongRowCard";
-import Widget from "../../components/widget/Widget";
 import CoverModal from "../../components/CoverModal";
 import './EditPlaylistScreen.css';
 import { Favorite, FavoriteBorder, MoreHoriz, PlayArrow, Pause, AccessTime, Create, Save } from '@material-ui/icons';
@@ -13,7 +12,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 import { AuthContext } from '../../context/auth';
 import { gql, useQuery, useMutation } from '@apollo/client';
-import { useParams, withRouter, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import ShareModal from '../../components/ShareModal';
 import ErrorPage from '../../components/error_page/ErrorPage';

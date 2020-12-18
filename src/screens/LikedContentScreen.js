@@ -3,11 +3,10 @@ import { Layout } from "antd";
 import Sidebar from "../components/sidebar/Sidebar";
 import TopBar from "../components/top_bar/TopBar";
 import ContentRow from "../components/content_row/ContentRow";
-import Widget from "../components/widget/Widget";
 import { gql, useQuery } from '@apollo/client';
 import { AuthContext } from '../context/auth';
 
-const { Header, Content, Sider, Footer } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function LikedContentScreen(props) {
     const { user } = useContext(AuthContext);
