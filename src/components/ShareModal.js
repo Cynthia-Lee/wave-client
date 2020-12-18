@@ -22,7 +22,7 @@ const ShareModal = ({ visible, playlist, onCancel}) => {
         >
             <Search
                 id="search-copy"
-                defaultValue={'http://localhost:3000/playlist/' + playlist.id}
+                defaultValue={'https://wave-music.netlify.app/playlist/' + playlist.id}
                 enterButton="Copy"
                 size="medium"
                 onSearch={onCopy}
